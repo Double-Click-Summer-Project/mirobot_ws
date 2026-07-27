@@ -1,0 +1,35 @@
+/**:
+  ros__parameters:
+    # Serial timing. Port, baud rate, and dry-run are launch arguments.
+    reconnect_period_s: 2.0
+    status_query_period_s: 0.25
+    status_timeout_s: 2.0
+    min_send_period_s: 0.05
+    homing_confirmation_delay_s: 0.5
+    # Fallback when firmware does not report a non-Idle homing state.
+    homing_idle_confirmation_delay_s: 3.0
+    homing_timeout_s: 60.0
+    motion_completion_timeout_s: 120.0
+    joint_completion_tolerance_deg: 0.5
+    xyz_completion_tolerance_mm: 1.0
+
+    # JointState input is rad; these validation limits and firmware output are deg.
+    joint_names:
+      [joint1, joint2, joint3, joint4, joint5, joint6]
+    joint_lower_limits_deg:
+      [-100.0, -30.0, -170.0, -350.0, -205.0, -360.0]
+    joint_upper_limits_deg:
+      [160.0, 70.0, 60.0, 350.0, 36.0, 360.0]
+    joint_feedrate: 2000  # deg/min
+
+    # Point input is m; these validation limits and firmware output are mm.
+    workspace_lower_mm: [140.0, -270.0, 40.0]
+    workspace_upper_mm: [290.0, 270.0, 300.0]
+    xyz_feedrate: 2000  # mm/min
+
+    # G0: point-to-point, G1: linear interpolation.
+    cartesian_motion_mode: G0
+
+    # Vacuum pump PWM (M3S). Valid range: 0-1000.
+    pump_on_pwm: 1000
+    pump_off_pwm: 0
