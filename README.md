@@ -22,10 +22,9 @@ cd ~/mirobot_ws
 ```bash
 cd ~/mirobot_ws/src
 
-git clone https://github.com/your-org/mirobot_driver.git
+git clone https://github.com/Double-Click-Summer-Project/mirobot_ws.git
 ```
 
-> 실제 사용 시 `your-org`는 본인 GitHub 주소로 변경
 
 ---
 
