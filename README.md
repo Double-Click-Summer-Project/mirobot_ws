@@ -29,17 +29,6 @@ git clone https://github.com/your-org/mirobot_driver.git
 
 ---
 
-## 1-3. 브랜치 확인 (선택)
-
-```bash
-cd mirobot_driver
-
-git branch
-git checkout main
-```
-
----
-
 # 2. 패키지 구조
 
 ```text
@@ -124,6 +113,8 @@ ros2 pkg prefix mirobot_driver
 # 5. 드라이버 실행
 
 ```bash
+sudo chmod 777 /dev/ttyUSB0
+
 ros2 launch mirobot_driver mirobot.launch.py \
   port:=/dev/ttyUSB0 \
   auto_home:=true \
